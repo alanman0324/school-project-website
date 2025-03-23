@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../logo/AI logo 小.ico" type="image/x-icon">
+    <title>AI 會說話的照片</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <span class="logo"><img src="../logo/AI logo.png" width="60" height="60"></span>
+        <label for="switch"><img src="../圖片/AI選單.png"></label>
+        <input type="checkbox" id="switch" aria-label="切換選單">
+        <ul class="menu">
+            <li><a href="../index.html">首頁</a></li>
+            <li><a href="../about.html">關於我們</a></li>
+            <li><a href="../index.html#features">功能展示</a></li>
+            <li><a href="../registration method.html">網站註冊方法</a></li>
+            <li><a href="../contact.html">聯絡我們</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">首頁</a> &gt; <span>AI 會說話的照片</span>
+        </div>
+
+        <section class="hero">
+            <h1>AI 會說話的照片</h1>
+            <p>這是一款能夠將靜態照片轉換為會說話影片的 AI 工具。</p>
+            <p>主要功能是透過 AI 技術生成嘴巴和臉部的動作，使照片中的人物看起來像是在說話。</p>
+            <p>以下是 Vidnoz AI 生成會說話照片的基本流程：</p>
+        </section>
+
+        <section id="guide">
+            <h2>使用步驟</h2>
+
+            <div class="step" id="step1">
+                <h3>步驟 1：上傳照片</h3>
+                <p>前往 <a href="https://tw.vidnoz.com/talking-head.html" target="_blank">VIDNOZ 官方網站</a>，上傳人像照片。</p>
+                <img src="../圖片/1.會說話的圖片/01.jpg" alt="步驟1示範">
+                <button onclick="scrollToNextStep('step2')">下一步</button>
+            </div>
+
+            <div class="step" id="step2">
+                <h3>步驟 2：輸入或錄製語音</h3>
+                <p>輸入文字讓 AI 轉換為語音，或上傳自己的語音。</p>
+                <img src="../圖片/1.會說話的圖片/02.jpg" alt="步驟2示範">
+                <button onclick="scrollToNextStep('step3')">下一步</button>
+            </div>
+
+            <div class="step" id="step3">
+                <h3>步驟 3：生成動畫</h3>
+                <p>AI 會分析照片，自動生成嘴部、臉部動作，使其與語音同步。</p><br>
+                <img src="../圖片/1.會說話的圖片/03.gif" alt="步驟3示範"><br>
+                <button onclick="scrollToNextStep('step4')">下一步</button>
+            </div>
+
+            <div class="step" id="step4">
+                <h3>步驟 4：下載與分享</h3>
+                <p>影片生成後，可下載 MP4，或直接分享到社交平台。</p>
+                <img src="../圖片/1.會說話的圖片/04.gif" alt="步驟4示範">
+                <button onclick="scrollToNextStep('step5')">完成</button>
+            </div>
+
+            <div class="step" id="step5">
+                <h3>成品</h3>
+                <p>Vidnoz AI 可應用於虛擬主播、教育、行銷、娛樂等場景。</p>
+                <div class="video-container">
+                    <video width="400" height="400" controls autoplay loop muted playsinline>
+                        <source src="../影片/Talking Photo.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="step">
+                <h3>注意事項</h3>
+                <p>本工具提供免費使用，但部分<strong>進階功能</strong>（如去除浮水印）需💰付費解鎖，以獲得更完整的體驗。</p>
+                <ul>
+                    <li>&nbsp;🔹 AI 影片生成（免費）</li>
+                    <li>🔹 文字轉語音（免費）</li>
+                    <li>🔒 消除浮水印（付費）</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;🔒 解除影音限制（付費）</li>
+                </ul>
+                <img src="../圖片/1.會說話的圖片/05.gif" alt="浮水印示範">
+                <br>
+                <a href="../index.html">返回首頁</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Copyright © 2025 xiao weilun &nbsp;&nbsp;&nbsp; All rights reserved.</p>
+    </footer>
+    <button id="backTop">🡅</button>
+    <script src="../js/hamburgerMenu.js"></script>
+    <script src="../js/tonextstep.js"></script>
+    <script src="../js/backtop.js"></script>
+</body>
+
+</html>

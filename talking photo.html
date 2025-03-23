@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo/AI logo 小.ico" type="image/x-icon">
+    <title>AI 會說話的照片免費版</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h1 {
+            color: #000;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        ul li {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        button {
+            font-size: 16px;
+        }
+
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #eee;
+            padding: 10px 20px;
+            height: 60px;
+            /* 讓 nav 高度固定 */
+        }
+
+        nav .logo {
+            font-weight: bold;
+            color: #333333;
+            font-size: 2rem;
+            /* 增大字體大小 */
+            display: flex;
+            align-items: center;
+            /* 垂直居中 logo */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #61dafb;
+        }
+
+        .logo img {
+            position: relative;
+            left: 20px;
+            max-width: 60px;
+            /* 可以調整 logo 大小 */
+            height: auto;
+            margin-right: 10px;
+            /* logo 右側添加間距 */
+        }
+
+        /* 漢堡選單樣式 */
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+        label img {
+            max-width: 30px;
+            /* 控制圖示的最大寬度 */
+            height: auto;
+            /* 讓高度自動調整，保持圖示比例 */
+        }
+
+        .menu {
+            max-height: 0;
+            overflow: hidden;
+            background: #eee;
+            transition: max-height 0.6s ease;
+            text-align: center;
+        }
+
+        input:checked~.menu {
+            max-height: 300px;
+        }
+
+        .menu li {
+            list-style: none;
+            border-bottom: 1px solid #efefef;
+        }
+
+        .menu li a {
+            display: block;
+            line-height: 50px;
+            font-size: 18px;
+            color: #5d5d5d;
+        }
+
+        .menu li a:hover {
+            background: #5d5d5d;
+            color: #fff;
+        }
+
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+
+        .breadcrumb {
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .step {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .step a {
+            text-decoration: none;
+            color: #9e68ea;
+            margin: 0 1rem;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .step p {
+            font-weight: bold;
+        }
+
+        .step img {
+            max-width: 100%;
+            height: auto;
+            /* 保持圖片比例 */
+            display: block;
+            margin: 0 auto;
+            /* 讓圖片水平置中 */
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            padding: 5px 0;
+        }
+
+        /* Footer */
+        footer {
+            width: 100%;
+            height: 50px;
+            margin-top: 40px;
+            background-color: #282c34;
+            color: #999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Media Queries */
+        @media screen and (min-width: 768px) {
+            label {
+                display: none;
+                order: 2;
+                /* 漢堡選單按鈕移至右側 */
+                margin-left: auto;
+                /* 讓按鈕靠右 */
+            }
+
+            .menu {
+                float: right;
+                clear: none;
+                max-height: 50px;
+                background: #eee;
+            }
+
+            .menu li {
+                display: inline-block;
+            }
+
+            .menu li a {
+                padding: 0 15px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            footer {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        }
+
+        /* 媒體查詢 (螢幕最大寬度 768px) */
+        @media screen and (max-width: 748px) {
+
+            /* 調整 nav 讓 logo 置中，選單按鈕在右側 */
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                padding: 20px 20px;
+                /* 增加 padding，使 nav 高度增大 */
+                height: 80px;
+                /* 可選，指定 nav 的高度 */
+            }
+
+            .logo {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            label {
+                order: 2;
+                cursor: pointer;
+                position: absolute;
+                right: 20px;
+                /* 將選單按鈕置於右側 */
+            }
+
+            /* 修改選單的位置，讓它在視窗上方展開 */
+            .menu {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                /* 將選單對齊右側 */
+                transform: translateX(0);
+                /* 移除之前居中的 transform */
+                width: 90%;
+                max-height: 0;
+                overflow: hidden;
+                background: #eee;
+                transition: max-height 0.7s ease-in-out;
+                text-align: center;
+                border-radius: 5px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            /* 當 checkbox 被勾選時，展開選單 */
+            input:checked~.menu {
+                max-height: 300px;
+                padding: 10px 0;
+                overflow-y: auto;
+            }
+
+            .menu li {
+                list-style: none;
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .menu li a {
+                text-decoration: none;
+                font-size: 18px;
+                color: #333;
+                display: block;
+                padding: 10px;
+            }
+
+            .menu li a:hover {
+                background: #5d5d5d;
+                color: #fff;
+            }
+        }
+
+        /* 媒體查詢 (螢幕最大寬度 480px) */
+        @media screen and (max-width: 480px) {
+
+            /* 調整 nav 讓 logo 置中，選單按鈕在右側 */
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                padding: 10px 20px;
+            }
+
+            .hero {
+                height: auto;
+                padding: 30px 20px 10px 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .hero div {
+                padding: 15px;
+                max-width: 90%;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            /* logo 置中 */
+            .logo {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 24px;
+                font-weight: bold;
+                z-index: 2;
+                /* 確保 logo 在選單之上 */
+            }
+
+            label {
+                order: 2;
+                cursor: pointer;
+                position: absolute;
+                right: 20px;
+                /* 確保選單按鈕位於右邊 */
+            }
+
+            /* 選單展開時應該位於 logo 下方 */
+            .menu {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                /* 將選單對齊右側 */
+                transform: translateX(0);
+                /* 移除之前居中的 transform */
+                width: 90%;
+                max-height: 0;
+                overflow: hidden;
+                background: #eee;
+                transition: max-height 0.5s ease-in-out;
+                text-align: center;
+                border-radius: 5px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 1;
+            }
+
+            /* 當 checkbox 被勾選時，展開選單 */
+            input:checked~.menu {
+                max-height: 300px;
+                padding: 10px 0;
+                overflow-y: auto;
+            }
+
+            .menu li {
+                list-style: none;
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .menu li a {
+                text-decoration: none;
+                font-size: 18px;
+                color: #333;
+                display: block;
+                padding: 10px;
+            }
+
+            .menu li a:hover {
+                background: #5d5d5d;
+                color: #fff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <span class="logo"><img src="logo/AI logo.png" width="60" height="60"></span>
+        <label for="switch"><img src="圖片/選單.png"></label>
+        <input type="checkbox" id="switch" aria-label="切換選單">
+        <ul class="menu">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="about.html">關於我們</a></li>
+            <li><a href="index.html#features">功能展示</a></li>
+            <li><a href="registration method.html">網站註冊方法</a></li>
+            <li><a href="contact.html">聯絡我們</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">首頁</a> &gt; <span>AI 會說話的照片</span>
+        </div>
+
+        <section class="hero">
+            <h1>AI 會說話的照片免費版</h1>
+            <p>這是一款能夠將靜態照片轉換為會說話影片的 AI 工具。</p>
+            <p>主要功能是透過 AI 技術生成嘴巴和臉部的動作，使照片中的人物看起來像是在說話。</p>
+            <p>以下是 Vidnoz AI 生成會說話照片的基本流程：</p>
+        </section>
+
+        <section id="guide">
+            <h2>使用步驟</h2>
+
+            <div class="step" id="step1">
+                <h3>步驟 1：上傳照片</h3>
+                <p>前往 <a href="https://www.vidnoz.com/" target="_blank">VIDNOZ 官方網站</a>，上傳人像照片。</p>
+                <img src="圖片/會說話的圖片/01.jpg" alt="步驟1示範">
+                <button onclick="scrollToNextStep('step2')">下一步</button>
+            </div>
+
+            <div class="step" id="step2">
+                <h3>步驟 2：輸入或錄製語音</h3>
+                <p>輸入文字讓 AI 轉換為語音，或上傳自己的語音。</p>
+                <img src="圖片/會說話的圖片/02.jpg" alt="步驟2示範">
+                <button onclick="scrollToNextStep('step3')">下一步</button>
+            </div>
+
+            <div class="step" id="step3">
+                <h3>步驟 3：生成動畫</h3>
+                <p>AI 會分析照片，自動生成嘴部、臉部動作，使其與語音同步。</p>
+                <img src="圖片/會說話的圖片/03.gif" alt="步驟3示範">
+                <button onclick="scrollToNextStep('step4')">下一步</button>
+            </div>
+
+            <div class="step" id="step4">
+                <h3>步驟 4：下載與分享</h3>
+                <p>影片生成後，可下載 MP4，或直接分享到社交平台。</p>
+                <img src="圖片/會說話的圖片/04.gif" alt="步驟4示範">
+                <button onclick="scrollToNextStep('step5')">完成</button>
+            </div>
+
+            <div class="step" id="step5">
+                <h3>成品</h3>
+                <p>Vidnoz AI 可應用於虛擬主播、教育、行銷、娛樂等場景。</p>
+                <div class="video-container">
+                    <video width="400" height="400" controls autoplay loop muted playsinline>
+                        <source src="影片/Talking Photo.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="step">
+                <h3>注意事項</h3>
+                <p>本工具提供免費使用，但部分<strong>進階功能</strong>（如去除浮水印）需💰付費解鎖，以獲得更完整的體驗。</p>
+                <ul>
+                    <li>&nbsp;🔹 AI 影片生成（免費）</li>
+                    <li>🔹 文字轉語音（免費）</li>
+                    <li>🔒 消除浮水印（付費）</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;🔒 解除影音限制（付費）</li>
+                </ul>
+                <img src="圖片/會說話的圖片/05.gif" alt="浮水印示範">
+                <br>
+                <a href="index.html">返回首頁</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Copyright © 2025 xiao weilun &nbsp;&nbsp;&nbsp; All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

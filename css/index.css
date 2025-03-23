@@ -1,0 +1,559 @@
+       /* 全域樣式 */
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+
+       body {
+           font-family: Arial, sans-serif;
+           line-height: 1.6;
+           color: #333;
+       }
+
+       nav ul li {
+           font-size: 16px;
+           list-style: inside;
+           background-color: #AFDFE4;
+       }
+
+       nav {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           background-color: #AFDFE4;
+           padding: 10px 20px;
+           height: 60px;
+           /* 讓 nav 高度固定 */
+       }
+
+       nav .logo {
+           font-weight: bold;
+           color: #333333;
+           font-size: 2rem;
+           /* 增大字體大小 */
+           display: flex;
+           align-items: center;
+           /* 垂直居中 logo */
+       }
+
+       nav a {
+           text-decoration: none;
+           color: #fff;
+           margin: 0 1rem;
+           font-weight: bold;
+       }
+
+       nav a:hover {
+           color: #61dafb;
+       }
+
+       .logo img {
+           position: relative;
+           left: 20px;
+           max-width: 60px;
+           /* 可以調整 logo 大小 */
+           height: auto;
+           margin-right: 10px;
+           /* logo 右側添加間距 */
+       }
+
+       /* 漢堡選單樣式 */
+       nav input[type="checkbox"] {
+           display: none;
+       }
+
+       nav label {
+           cursor: pointer;
+       }
+
+       nav label img {
+           max-width: 30px;
+           /* 控制圖示的最大寬度 */
+           height: auto;
+           /* 讓高度自動調整，保持圖示比例 */
+       }
+
+       label[for="switch"] img {
+           transition: opacity 0.3s ease;
+       }
+
+       label[for="switch"]:hover img {
+           mix-blend-mode: multiply;
+           opacity: 1;
+       }
+
+
+       .menu {
+           max-height: 0;
+           overflow: hidden;
+           background: #eee;
+           transition: max-height 0.6s ease;
+           text-align: center;
+       }
+
+       input:checked~.menu {
+           max-height: 300px;
+           background-color: #AFDFE4;
+       }
+
+       .menu li {
+           list-style: none;
+           border-bottom: 1px solid #efefef;
+       }
+
+       .menu li a {
+           display: block;
+           line-height: 50px;
+           font-size: 18px;
+           color: #5d5d5d;
+       }
+
+       .menu li a:hover {
+           background: #5d5d5d;
+           color: #fff;
+       }
+
+       /* Hero 區域 */
+       .hero {
+           height: 500px;
+           background: #A3C1DA;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           text-align: center;
+           padding: 10px 50px 0 50px;
+       }
+
+       .hero div {
+           width: 90%;
+           max-width: 750px;
+           padding: 2rem;
+           background: linear-gradient(135deg, #A3C1DA 0%, #D4E9F5 100%);
+           flex: 1 1 calc(33.333% - 1rem);
+           padding: 1rem;
+           border-radius: 20px;
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+           text-align: center;
+           transition: transform 0.3s;
+       }
+
+       .hero h1 {
+           font-size: 3rem;
+           margin-bottom: 1rem;
+       }
+
+       .hero ul {
+           text-align: left;
+           display: inline-block;
+           /* 讓 <ul> 保持內容寬度，不會擴展至整行 */
+           margin: 0 auto;
+           /* 讓 <ul> 水平置中 */
+           padding-left: 20px;
+           /* 調整左側間距 */
+       }
+
+       .hero p {
+           font-size: 1.5rem;
+           margin-bottom: 10px;
+       }
+
+       .hero a:first-of-type {
+           display: inline-block;
+           color: #fff;
+           text-decoration: none;
+           font-weight: bold;
+           font-size: 28px;
+           top: 20px;
+           transition: background 0.3s;
+       }
+
+       .hero a:last-child {
+           display: inline-block;
+           padding: 0.75rem 2rem;
+           background: #F5F5F5;
+           color: #282c34;
+           text-decoration: none;
+           border-radius: 5px;
+           font-weight: bold;
+           transition: background 0.3s;
+       }
+
+       .hero a:hover {
+           background: #61dafb;
+           color: #fff;
+       }
+
+       /* 功能展示 */
+       .section {
+           padding: 2rem 1rem;
+       }
+
+       .container {
+           max-width: 1200px;
+           margin: 0 auto;
+           display: flex;
+           flex-wrap: wrap;
+           gap: 1rem;
+       }
+
+       .card {
+           flex: 1 1 calc(33.333% - 1rem);
+           /* 默认桌面端，每行 3 个 */
+           background: #f4f4f4;
+           padding: 1rem;
+           border-radius: 5px;
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+           text-align: center;
+           transition: transform 0.3s;
+       }
+
+       .card:hover {
+           transform: translateY(-10px);
+       }
+
+       .card img {
+           max-width: 100%;
+           border-radius: 5px;
+           width: 300px;
+           height: auto;
+       }
+
+       .card video {
+           width: 282px;
+           height: 282px;
+       }
+
+       .card h3 {
+           margin: 1rem 0;
+       }
+
+       .card p {
+           color: #666;
+       }
+
+       .card a {
+           display: inline-block;
+           margin-top: 1rem;
+           color: #4FC3E0;
+           text-decoration: none;
+           font-weight: bold;
+       }
+
+       .card a:hover {
+           color: #282c34;
+       }
+
+       /* Footer */
+       footer {
+           width: 100%;
+           height: 50px;
+           margin-top: 40px;
+           background-color: #A5C8D3;
+           color: #333333;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           text-align: center;
+           padding: 1rem;
+       }
+
+       #backTop {
+           display: none;
+           /* 預設隱藏 */
+           position: fixed;
+           bottom: 30px;
+           right: 30px;
+           width: 50px;
+           height: 50px;
+           background: rgba(51, 51, 51, 0.7);
+           color: white;
+           border: none;
+           border-radius: 50%;
+           cursor: pointer;
+           font-size: 26px;
+           text-align: center;
+           line-height: 50px;
+           transition: opacity 0.3s ease, transform 0.3s ease;
+           opacity: 0;
+           transform: scale(0);
+       }
+
+       #backTop.show {
+           display: block;
+           opacity: 1;
+           transform: scale(1);
+       }
+
+       #backTop:hover {
+           background: #555;
+       }
+
+
+       /* 預設樣式，未縮小時保持 header 內容 */
+
+       @media screen and (min-width: 768px) {
+           nav label {
+               display: none;
+               order: 2;
+               /* 漢堡選單按鈕移至右側 */
+               margin-left: auto;
+               /* 讓按鈕靠右 */
+           }
+
+           .menu {
+               float: right;
+               clear: none;
+               max-height: 50px;
+               background-color: #AFDFE4;
+           }
+
+           .menu li {
+               display: inline-block;
+           }
+
+           .menu li a {
+               padding: 0 15px;
+           }
+
+           .hero h1 {
+               font-size: 2.5rem;
+           }
+
+           .hero p {
+               font-size: 1.2rem;
+           }
+
+           .card video {
+               width: 250px;
+               height: 250px;
+           }
+
+           footer {
+               font-size: 14px;
+               line-height: 1.5;
+           }
+       }
+
+
+       @media screen and (max-width: 768px) {
+           nav {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               position: relative;
+               padding: 20px 20px;
+               /* 增加 padding，使 nav 高度增大 */
+               height: 80px;
+               /* 可選，指定 nav 的高度 */
+           }
+
+           .hero h1 {
+               font-size: 2rem;
+               /* 调整大小，可以根据需要更改 */
+           }
+
+           .hero p {
+               font-size: 1rem;
+           }
+
+           .logo {
+               position: absolute;
+               left: 50%;
+               transform: translateX(-50%);
+               font-size: 24px;
+               font-weight: bold;
+           }
+
+           .card {
+               flex: 1 1 calc(50% - 1rem);
+               /* 每行 2 个 */
+           }
+
+           nav label {
+               order: 2;
+               cursor: pointer;
+               position: absolute;
+               right: 20px;
+               /* 將選單按鈕置於右側 */
+           }
+
+           /* 修改選單的位置，讓它在視窗上方展開 */
+           .menu {
+               position: absolute;
+               top: 100%;
+               right: 0;
+               /* 將選單對齊右側 */
+               transform: translateX(0);
+               /* 移除之前居中的 transform */
+               width: 90%;
+               max-height: 0;
+               overflow: hidden;
+               background: #eee;
+               transition: max-height 0.7s ease-in-out;
+               text-align: center;
+               border-radius: 5px;
+               box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+           }
+
+           input:checked~.menu {
+               max-height: 300px;
+               padding: 10px 0;
+               overflow-y: auto;
+           }
+
+           .menu li {
+               list-style: none;
+               padding: 10px;
+               border-bottom: 1px solid #ddd;
+           }
+
+           .menu li a {
+               text-decoration: none;
+               font-size: 18px;
+               color: #333;
+               display: block;
+               padding: 10px;
+           }
+
+           .menu li a:hover {
+               background: #5d5d5d;
+               color: #fff;
+           }
+
+           #backTop {
+               width: 40px;
+               height: 40px;
+               font-size: 16px;
+               line-height: 40px;
+               bottom: 20px;
+               /* 更靠近邊緣 */
+               right: 20px;
+           }
+       }
+
+       /* 媒體查詢 (螢幕最大寬度 480px) */
+       @media screen and (max-width: 480px) {
+
+           /* 調整 nav 讓 logo 置中，選單按鈕在右側 */
+           nav {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               position: relative;
+               padding: 10px 20px;
+           }
+
+           .hero {
+               height: auto;
+               padding: 30px 20px 10px 20px;
+               display: flex;
+               flex-direction: column;
+               /* 使内容垂直排列 */
+               justify-content: flex-start;
+               /* 从上到下排列 */
+           }
+
+           .hero div {
+               padding: 15px;
+               max-width: 90%;
+           }
+
+           .hero h1 {
+               font-size: 2rem;
+               margin-bottom: 10px;
+               /* 添加间距使 h1 与 p 之间更有间隔 */
+           }
+
+           .hero p {
+               font-size: 1rem;
+           }
+
+           /* logo 置中 */
+           .logo {
+               position: absolute;
+               left: 50%;
+               transform: translateX(-50%);
+               font-size: 24px;
+               font-weight: bold;
+               z-index: 2;
+               /* 確保 logo 在選單之上 */
+           }
+
+           .card {
+               flex: 1 1 100%;
+               /* 每行 1 个 */
+           }
+
+           nav label {
+               order: 2;
+               cursor: pointer;
+               position: absolute;
+               right: 20px;
+               /* 確保選單按鈕位於右邊 */
+           }
+
+           /* 選單展開時應該位於 logo 下方 */
+           .menu {
+               position: absolute;
+               top: 100%;
+               right: 0;
+               /* 將選單對齊右側 */
+               transform: translateX(0);
+               /* 移除之前居中的 transform */
+               width: 90%;
+               max-height: 0;
+               overflow: hidden;
+               background: #eee;
+               transition: max-height 0.5s ease-in-out;
+               text-align: center;
+               border-radius: 5px;
+               box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+               z-index: 1;
+           }
+
+           /* 當 checkbox 被勾選時，展開選單 */
+           input:checked~.menu {
+               max-height: 300px;
+               padding: 10px 0;
+               overflow-y: auto;
+           }
+
+           .menu li {
+               list-style: none;
+               padding: 10px;
+               border-bottom: 1px solid #ddd;
+           }
+
+           .menu li a {
+               text-decoration: none;
+               font-size: 18px;
+               color: #333;
+               display: block;
+               padding: 10px;
+           }
+
+           .menu li a:hover {
+               background: #5d5d5d;
+               color: #fff;
+           }
+
+           #backTop {
+               width: 30px;
+               height: 30px;
+               bottom: 12px;
+               right: 12px;
+               font-size: 14px;
+               line-height: 25px;
+               background: rgba(51, 51, 51, 0.5);
+               /* 更透明 */
+           }
+
+           footer {
+               text-align: center;
+           }
+
+           footer p {
+               font-size: 14px;
+           }
+       }

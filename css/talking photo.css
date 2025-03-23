@@ -1,0 +1,249 @@
+/* 全局樣式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #000;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+}
+
+ul li {
+    font-size: 16px;
+}
+
+button {
+    font-size: 16px;
+}
+
+/* 導覽列 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #282c34;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #61dafb;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    /* 讓 footer 滿版 */
+    height: 50px;
+    margin-top: 40px;
+    background-color: #282c34;
+    color: #999;
+    display: flex;
+    justify-content: center;
+    /* 讓內容置中 */
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.step a {
+    text-decoration: none;
+    color: #9e68ea;
+    margin: 0 1rem;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        border-bottom: 1px solid white;
+    }
+
+    footer {
+        flex-direction: column;
+        /* 小螢幕時調整排列方式 */
+        padding: 1.5rem 1rem;
+    }
+
+}
+
+/* Hero 區域 */
+.hero {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 10 2rem;
+}
+
+.hero div {
+    max-width: 800px;
+    /* 限制寬度 */
+    padding: 20px;
+    /* 內邊距 */
+    background: #9695ce;
+    /* 設置藍色背景 */
+    color: white;
+    /* 讓文字變白，提高可讀性 */
+    border-radius: 10px;
+    /* 圓角邊框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 添加陰影效果 */
+    font-size: 18px;
+}
+
+/* 使用步驟 */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.step {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.step img {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* 聯絡我們區塊 */
+.contact-section {
+    background: #f8f8f8;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+}

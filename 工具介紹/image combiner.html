@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../logo/AI logo 小.ico" type="image/x-icon">
+    <title>AI 照片合成</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <span class="logo"><img src="../logo/AI logo.png" width="60" height="60"></span>
+        <label for="switch"><img src="../圖片/AI選單.png"></label>
+        <input type="checkbox" id="switch" aria-label="切換選單">
+        <ul class="menu">
+            <li><a href="../index.html">首頁</a></li>
+            <li><a href="../about.html">關於我們</a></li>
+            <li><a href="../index.html#features">功能展示</a></li>
+            <li><a href="../registration method.html">網站註冊方法</a></li>
+            <li><a href="../contact.html">聯絡我們</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">首頁</a> &gt; <span>AI 照片合成</span>
+        </div>
+
+        <section class="hero">
+            <h1>AI 照片合成</h1>
+            <p>Vidnoz AI 提供 圖片融合功能</p>
+            <p>透過 AI 技術將兩張或多張圖片智能合成，創造出自然流暢的合併效果。</p>
+            <p>以下是 Vidnoz AI 照片合成的基本流程：</p>
+        </section>
+
+        <section id="guide">
+            <h2>使用步驟</h2>
+
+            <div class="step" id="step1">
+                <h3>步驟 1：上傳照片</h3>
+                <p>前往 <a href="https://tw.vidnoz.com/image-combiner.html" target="_blank">VIDNOZ 官方網站</a>，上傳照片。</p>
+                <p>選擇一張或多張圖片，這些圖片可以是：</p>
+                <ul>
+                    <li><strong>人像合成：</strong> 將兩張或多張人臉融合，例如父母臉孔合成新面孔。</li>
+                    <li><strong>背景融合：</strong> 更換場景或環境，使圖片與新背景自然融合。</li>
+                    <li><strong>藝術拼接：</strong> 創意合成，如雙重曝光效果或其他藝術風格處理。</li>
+                </ul>
+                <img src="../圖片/6.照片合成/2.gif" alt="步驟1示範">
+                <button onclick="scrollToNextStep('step2')">下一步</button>
+            </div>
+
+            <div class="step" id="step2">
+                <h3>步驟 2：合成圖片</h3>
+                <p>點擊立即合成圖片</p>
+                <img src="../圖片/6.照片合成/3.gif" alt="步驟2示範">
+                <button onclick="scrollToNextStep('step3')">下一步</button>
+            </div>
+
+            <div class="step" id="step3">
+                <h3>步驟 3：AI 智能合成</h3>
+                <p>AI 會分析圖像元素，如光線、顏色、輪廓、紋理，並進行自動融合，使畫面看起來自然且和諧。</p><br>
+                <img src="../圖片/6.照片合成/4.gif" alt="步驟3示範"><br>
+                <button onclick="scrollToNextStep('step4')">下一步</button>
+            </div>
+
+            <div class="step" id="step4">
+                <h3>步驟 4：下載與應用</h3>
+                <p>完成後，使用者可下載融合後的圖片，適用於 創意設計、影像藝術、數位拼貼、社群媒體創作 等。</p>
+                <br>
+                <img src="../圖片/6.照片合成/5.png" alt="步驟4示範">
+                <button onclick="scrollToNextStep('step5')">完成</button>
+            </div>
+
+            <div class="step" id="step5">
+                <h3>成品</h3>
+                <p>Vidnoz AI 圖片融合 功能適合 藝術創作、照片修飾、趣味影像合成，輕鬆打造高質感 AI 影像！ </p>
+                <img src="../圖片/6.照片合成/AI 照片合成.png" width="400" height="auto" alt="步驟4示範">
+            </div>
+
+            <div class="step">
+                <h3>注意事項</h3>
+                <p>為確保最佳使用體驗，請在使用本工具前留意以下事項：</p>
+                <ul>
+                    <li><strong>圖片格式：</strong> 支援 JPG、PNG 等常見圖片格式，請確保圖片格式相容。</li>
+                    <li><strong>圖片尺寸：</strong> 上傳圖片時，建議使用相似尺寸，以避免合併後比例失真。</li>
+                    <li><strong>解析度要求：</strong> 為獲得最佳效果，請使用高解析度圖片，避免模糊或失真。</li>
+                    <li><strong>背景處理：</strong> 若圖片有透明背景，合併後可能會出現黑色或白色填充背景。</li>
+                    <li><strong>合併方式：</strong> 支援水平、垂直或自訂方式拼接，請選擇適合的排列方式。</li>
+                    <li><strong>上傳圖片數量：</strong> 根據工具限制，可同時合併的圖片數量可能有所不同。</li>
+                </ul>
+                <br>
+                <a href="../index.html">返回首頁</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Copyright © 2025 xiao weilun &nbsp;&nbsp;&nbsp; All rights reserved.</p>
+    </footer>
+    <button id="backTop">🡅</button>
+    <script src="../js/hamburgerMenu.js"></script>
+    <script src="../js/tonextstep.js"></script>
+    <script src="../js/backtop.js"></script>
+</body>
+
+</html>

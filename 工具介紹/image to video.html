@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../logo/AI logo 小.ico" type="image/x-icon">
+    <title>AI 影像轉影片</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <span class="logo"><img src="../logo/AI logo.png" width="60" height="60"></span>
+        <label for="switch"><img src="../圖片/AI選單.png"></label>
+        <input type="checkbox" id="switch" aria-label="切換選單">
+        <ul class="menu">
+            <li><a href="../index.html">首頁</a></li>
+            <li><a href="../about.html">關於我們</a></li>
+            <li><a href="../index.html#features">功能展示</a></li>
+            <li><a href="../registration method.html">網站註冊方法</a></li>
+            <li><a href="../contact.html">聯絡我們</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">首頁</a> &gt; <span>AI 影像轉影片</span>
+        </div>
+
+        <section class="hero">
+            <h1>AI 影像轉影片</h1>
+            <p>透過 AI 技術讓靜態圖片變成動態影片。</p>
+            <h2>主要功能</h2>
+            <ul>
+                <li><strong>簡單快速的轉換：</strong> 透過上傳圖片或輸入文字，幾分鐘內即可生成影片，無需專業技能。</li>
+                <li><strong>豐富的風格選擇：</strong> 提供超過 30 種不同風格，如卡通、動畫和黏土動畫等，滿足各種美學需求。</li>
+                <li><strong>高品質影片輸出：</strong> 使用先進的渲染技術，確保影片清晰度高、色彩鮮豔且動作流暢。</li>
+                <li><strong>多平台分享：</strong> 可調整影片尺寸以適應不同平台，並直接分享到社交媒體，如 TikTok 和 YouTube 等。</li>
+            </ul>
+        </section>
+
+        <section id="guide">
+            <h2>使用步驟</h2>
+
+            <div class="step" id="step1">
+                <h3>步驟 1：上傳圖片</h3>
+                <p>前往 <a href="https://tw.vidnoz.com/image-to-video-ai.html" target="_blank">VIDNOZ
+                        官方網站</a>，使用者可以上傳任何靜態圖片，例如人像、動畫角色、插畫等。</p><br>
+                <img src="../圖片/3.影像轉影片/01.gif" alt="步驟1示範">
+                <button onclick="scrollToNextStep('step2')">下一步</button>
+            </div>
+
+            <div class="step" id="step2">
+                <h3>步驟 2：生成影片</h3>
+                <p> AI 會自動處理動畫效果，將靜態圖片轉為流暢的影片，最終輸出為 MP4 格式。</p>
+                <img src="../圖片/3.影像轉影片/02.gif" alt="步驟2示範">
+                <button onclick="scrollToNextStep('step3')">下一步</button>
+            </div>
+
+            <div class="step" id="step3">
+                <h3>步驟 3：下載與分享</h3>
+                <p>生成後的影片可供下載，或直接分享到社群平台、簡報、行銷內容等。</p><br>
+                <img src="../圖片/3.影像轉影片/03.gif" alt="步驟3示範"><br>
+                <button onclick="scrollToNextStep('step4')">完成</button>
+            </div>
+
+            <div class="step" id="step4">
+                <h3>完成</h3>
+                <p>Vidnoz AI 的影像轉影片功能適用於 數位行銷、教育內容、社交媒體創作、娛樂 等，讓靜態影像變得更具吸引力！</p>
+                <img src="../圖片/3.影像轉影片/04.jpg" style="width: 350px !important; max-width: none; height: auto;"
+                    alt="步驟4示範">
+            </div>
+            <div class="step" id="step5">
+                <h3>成品</h3>
+                <p>Vidnoz AI 可應用於虛擬主播、教育、行銷、娛樂等場景。</p>
+                <div class="video-container">
+                    <video width="400" height="400" controls autoplay loop muted playsinline>
+                        <source src="../影片/圖片轉影片.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="step">
+                <h3>注意事項</h3>
+                <ul>
+                    <li><strong>免費版 vs. 付費版：</strong> 免費版本可能有限制，如影片時長或解析度，請確認是否符合需求。</li>
+                    <li><strong>個人資訊保護：</strong> 避免上傳個人照片或敏感資訊，確保數據安全。</li>
+                    <li><strong>版權問題：</strong> 使用合法授權圖片，避免侵權風險。</li>
+                    <li><strong>字幕與語音同步：</strong> 生成影片時，請確認字幕與畫面內容同步。</li>
+                    <li><strong>影片下載與分享：</strong> 上傳至社交平台前，請確認該平台對 AI 生成內容的規範。</li>
+                </ul>
+                <br>
+                <a href="../index.html">返回首頁</a>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>Copyright © 2025 xiao weilun &nbsp;&nbsp;&nbsp; All rights reserved.</p>
+    </footer>
+    <button id="backTop">🡅</button>
+    <script src="../js/hamburgerMenu.js"></script>
+    <script src="../js/tonextstep.js"></script>
+    <script src="../js/backtop.js"></script>
+</body>
+
+</html>

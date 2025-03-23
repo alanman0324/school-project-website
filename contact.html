@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我們</title>
+    <link rel="stylesheet" href="css/contact.css">
+
+<body>
+    <nav>
+        <input type="checkbox" id="menu-toggle">
+        <span class="logo"><img src="logo/AI logo.png" width="60" height="60"></span>
+        <label for="switch"><img src="圖片/AI選單.png"></label>
+        <input type="checkbox" id="switch" aria-label="切換選單">
+        <ul class="menu">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="about.html">關於我們</a></li>
+            <li><a href="index.html#features">功能展示</a></li>
+            <li><a href="registration method.html">網站註冊方法</a></li>
+            <li><a href="contact.html">聯絡我們</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主要內容 -->
+    <section class="contact">
+        <h1>聯絡我們</h1>
+        <form action="php/contact.php" method="POST">
+            <label for="name">姓名：</label>
+            <input type="text" id="name" name="name" placeholder="請輸入您的姓名" required>
+
+            <label for="email">Email：</label>
+            <input type="email" id="email" name="email" placeholder="請輸入您的電子郵件" required>
+
+            <label for="subject">標題：</label>
+            <input type="text" id="subject" name="subject" placeholder="請輸入標題" required>
+
+            <label for="message">訊息：</label>
+            <textarea id="message" name="message" rows="5" placeholder="請輸入您的訊息內容" required></textarea>
+
+            <button type="submit">送出</button>
+        </form>
+    </section>
+    <script>
+        function redirectToThankYou(event) {
+            event.preventDefault(); // 防止表單真正提交
+            // 這裡可以加入 AJAX 來將表單資料存入資料庫
+            window.location.href = "thankyou.html"; // 跳轉到感謝頁面
+        }
+    </script>
+    <footer>
+        <p>Copyright © 2025 xiao weilun &nbsp;&nbsp;&nbsp; All rights reserved.</p>
+    </footer>
+    <script src="js/hamburgerMenu.js"></script>
+
+</body>
+
+</html>

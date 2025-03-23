@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>非商業用途提示</title>
+    <style>
+        /* 遮罩層，讓背景變暗 */
+        .modal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* 彈窗內容 */
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        /* 按鈕樣式 */
+        button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* 按鈕懸停效果 */
+        button:hover {
+            background: #0056b3;
+        }
+
+        /* 動畫效果 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="noticeModal" class="modal">
+        <div class="modal-content">
+            <p>⚠️ 本網站僅供非商業用途，謝謝您的支持！</p>
+            <button id="closeModal">我知道了</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("noticeModal");
+            const closeModal = document.getElementById("closeModal");
+
+            closeModal.onclick = function () {
+                modal.style.display = "none";
+            };
+        });
+    </script>
+
+</body>
+
+</html>

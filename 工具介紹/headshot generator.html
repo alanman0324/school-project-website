@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../logo/AI logo 小.ico" type="image/x-icon">
+    <title>AI 證件照生成器</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <span class="logo"><img src="../logo/AI logo.png" width="60" height="60"></span>
+        <label for="switch"><img src="../圖片/AI選單.png"></label>
+        <input type="checkbox" id="switch" aria-label="切換選單">
+        <ul class="menu">
+            <li><a href="../index.html">首頁</a></li>
+            <li><a href="../about.html">關於我們</a></li>
+            <li><a href="../index.html#features">功能展示</a></li>
+            <li><a href="../registration method.html">網站註冊方法</a></li>
+            <li><a href="../contact.html">聯絡我們</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">首頁</a> &gt; <span>AI 證件照生成器</span>
+        </div>
+
+        <section class="hero">
+            <h1>AI 證件照生成器</h1>
+            <p>Vidnoz AI 提供 照片轉證件照功能，能夠將日常照片智能轉換為符合標準的證件照。</p>
+            <p>以下是 Vidnoz AI 生成證件照的基本流程：</p>
+        </section>
+
+        <section id="guide">
+            <h2>使用步驟</h2>
+
+            <div class="step" id="step1">
+                <h3>步驟 1：上傳照片</h3>
+                <p>前往 <a href="https://tw.vidnoz.com/ai-headshot-generator.html" target="_blank">VIDNOZ 官方網站</a>，上傳人像照片。
+                </p>
+                <p>使用者可上傳 自拍照或普通照片，確保臉部清晰、光線均勻，以獲得最佳效果。</p>
+                <img src="../圖片/5.證件照生成器/1.gif" alt="步驟1示範">
+                <img src="../圖片/5.證件照生成器/2.gif" alt="步驟1示範">
+                <button onclick="scrollToNextStep('step2')">下一步</button>
+            </div>
+
+            <div class="step" id="step2">
+                <h3>步驟 2：基本設定：</h3>
+                <p>選擇性別與證件樣式。</p>
+                <img src="../圖片/5.證件照生成器/4.gif" alt="步驟2示範">
+                <img src="../圖片/5.證件照生成器/5.gif" alt="步驟2示範">
+                <button onclick="scrollToNextStep('step3')">下一步</button>
+            </div>
+
+            <div class="step" id="step3">
+                <h3>步驟 3：生成證件照</h3>
+                <p>點擊生成證件照</p>
+                <img src="../圖片/5.證件照生成器/6.gif" alt="步驟3示範"><br>
+                <p>生成中</p><br>
+                <img src="../圖片/5.證件照生成器/7.gif" alt="步驟3示範"><br>
+                <button onclick="scrollToNextStep('step4')">下一步</button>
+            </div>
+
+            <div class="step" id="step4">
+                <h3>步驟 4：下載與應用</h3>
+                <p>完成後，可下載高解析度證件照，適用於線上提交、列印或申請文件。</p>
+                <img src="../圖片/5.證件照生成器/8.gif" alt="步驟4示範">
+                <button onclick="scrollToNextStep('step5')">完成</button>
+            </div>
+
+            <div class="step" id="step5">
+                <h3>完成</h3>
+                <p>Vidnoz AI 證件照生成 功能適合 護照辦理、考試報名、求職申請 等場景，<br>讓日常照片一鍵變成標準證件照，省時又便利！</p>
+                <div style="display: flex; justify-content: center;">
+                    <img src="../圖片/5.證件照生成器/證件照1.png"
+                        style="width: 150px; height: auto; border-radius: 8px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);margin-right: 2px"
+                        alt="Vidnoz AI 證件照示範1">
+                    <img src="../圖片/5.證件照生成器/證件照2.png"
+                        style="width: 150px; height: auto; border-radius: 8px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);"
+                        alt="Vidnoz AI 證件照示範2">
+                </div>
+            </div>
+
+            <div class="step">
+                <h3>注意事項</h3>
+                <p>本工具提供免費使用，可輕鬆生成高品質頭像，打造更專業的證件照效果。請注意以下事項：</p>
+                <ul>
+                    <li><strong>圖片要求：</strong> 建議使用高解析度正面照片，以確保生成效果清晰。</li>
+                    <li><strong>背景處理：</strong> 最好使用簡單背景，避免雜亂背景影響 AI 處理。</li>
+                    <li><strong>光線條件：</strong> 建議選擇均勻光線的照片，避免過暗或過曝影響效果。</li>
+                    <li><strong>生成限制：</strong> 可能無法自訂細節，如特定服裝、表情或髮型。</li>
+                    <li><strong>適用場景：</strong> 適合用於履歷、LinkedIn、證件照等正式場合，但不適用於藝術風格照片。</li>
+                </ul>
+
+                <br>
+                <a href="../index.html">返回首頁</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Copyright © 2025 xiao weilun &nbsp;&nbsp;&nbsp; All rights reserved.</p>
+    </footer>
+    <button id="backTop">🡅</button>
+    <script src="../js/hamburgerMenu.js"></script>
+    <script src="../js/tonextstep.js"></script>
+    <script src="../js/backtop.js"></script>
+</body>
+
+</html>
