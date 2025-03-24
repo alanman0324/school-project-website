@@ -344,6 +344,7 @@ footer {
 }
 
 
+
 @media screen and (max-width: 768px) {
     nav {
         display: flex;
@@ -427,11 +428,15 @@ footer {
     #backTop {
         width: 40px;
         height: 40px;
-        font-size: 16px;
-        line-height: 40px;
         bottom: 20px;
         /* 更靠近邊緣 */
         right: 20px;
+        background: #808080;
+    }
+
+    #backTop img {
+        width: 26px;
+        height: auto;
     }
 }
 
