@@ -438,10 +438,16 @@
            /* 調整 nav 讓 logo 置中，選單按鈕在右側 */
            nav {
                display: flex;
-               justify-content: space-between;
                align-items: center;
                position: relative;
                padding: 10px 20px;
+           }
+
+           nav .logo {
+               position: absolute;
+               left: 50%;
+               transform: translateX(-50%);
+               /* 让 logo 精确置中 */
            }
 
            .hero {
