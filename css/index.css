@@ -365,11 +365,8 @@
 
            .logo {
                position: absolute;
-               display: inline-block;
-               width: 100%;
-               /* 让span占据整行 */
-               text-align: center;
-               /* 水平居中 */
+               left: 50%;
+               transform: translateX(-50%);
                font-size: 24px;
                font-weight: bold;
            }
@@ -491,11 +488,8 @@
            /* logo 置中 */
            .logo {
                position: absolute;
-               display: inline-block;
-               width: 100%;
-               /* 让span占据整行 */
-               text-align: center;
-               /* 水平居中 */
+               left: 50%;
+               transform: translateX(-50%);
                font-size: 24px;
                font-weight: bold;
                z-index: 2;
