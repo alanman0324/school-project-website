@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../logo/AI logo 小.ico" type="image/x-icon">
+    <title>AI 文本轉語音</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <span class="logo"><img src="../logo/AI logo.png" width="60" height="60"></span>
+        <label for="switch"><img src="../圖片/AI選單.png"></label>
+        <input type="checkbox" id="switch" aria-label="切換選單">
+        <ul class="menu">
+            <li><a href="../index.html">首頁</a></li>
+            <li><a href="../about.html">關於我們</a></li>
+            <li><a href="../index.html#features">功能展示</a></li>
+            <li><a href="../registration method.html">網站註冊方法</a></li>
+            <li><a href="../contact.html">聯絡我們</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">首頁</a> &gt; <span>AI 文本轉語音</span>
+        </div>
+
+        <section class="hero">
+            <h1>AI 文本轉語音</h1>
+            <p>Vidnoz AI 提供文本轉語音功能，利用AI生成自然流暢的語音，讓文字變成可朗讀的音訊。</p>
+            <p>以下是 Vidnoz AI 文本轉語音的基本流程：</p>
+        </section>
+
+        <section id="guide">
+            <h2>使用步驟</h2>
+
+            <div class="step" id="step1">
+                <h3>步驟 1：輸入文字</h3>
+                <p>前往 <a href="https://tw.vidnoz.com/text-to-speech.html" target="_blank">VIDNOZ 官方網站</a></p><br>
+                <p>使用者可直接輸入文本內容。</p>
+                <img src="../圖片/11.文本轉語音/1.gif" alt="步驟1示範">
+                <button onclick="scrollToNextStep('step2')">下一步</button>
+            </div>
+
+            <div class="step" id="step2">
+                <h3>步驟 2：選擇語言、聲音、風格和速度</h3>
+                <p>Vidnoz AI 提供多種語音選項，包含：不同語言、口音、情感風格和說話速度。</p><br>
+                <div style="display: flex; overflow-x: auto; justify-content: flex-start; gap: 10px;">
+                    <img src="../圖片/11.文本轉語音/2.gif" alt="步驟2示範" style="object-fit: contain; max-height: 200px;">
+                    <img src="../圖片/11.文本轉語音/3.gif" alt="步驟2示範" style="object-fit: contain; max-height: 200px;">
+                    <img src="../圖片/11.文本轉語音/4.gif" alt="步驟2示範" style="object-fit: contain; max-height: 200px;">
+                    <img src="../圖片/11.文本轉語音/5.gif" alt="步驟2示範" style="object-fit: contain; max-height: 200px;">
+                </div>
+                <br>
+                <button onclick="scrollToNextStep('step3')">下一步</button>
+            </div>
+
+            <div class="step" id="step3">
+                <h3>步驟 3： AI 生成語音</h3>
+                <p>系統會根據設定，自動將文字轉換為自然朗讀的音訊。</p><br>
+                <img src="../圖片/11.文本轉語音/6.gif" alt="步驟3示範"><br>
+                <button onclick="scrollToNextStep('step4')">下一步</button>
+            </div>
+
+            <div class="step" id="step4">
+                <h3>步驟 4：下載與應用</h3>
+                <p>生成的語音可下載為 MP3、WAV 等格式，適用於影片旁白、廣播、語音導航、有聲書、教育課程等場景。</p>
+                <img src="../圖片/11.文本轉語音/7.gif" alt="步驟4示範">
+                <button onclick="scrollToNextStep('step5')">完成</button>
+            </div>
+
+            <div class="step" id="step5">
+                <h3>成品</h3>
+                <p>Vidnoz AI 的 TTS 功能可讓內容創作者快速製作專業級語音，提升工作效率！</p>
+                <br>
+                <audio controls>
+                    <source src="../圖片/11.文本轉語音/文本轉語音.wav" type="audio/mpeg">
+                    您的瀏覽器不支持音频播放。
+                </audio>
+            </div>
+
+            <div class="step">
+
+                <a href="../index.html">返回首頁</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Copyright © 2025 xiao weilun &nbsp;&nbsp;&nbsp; All rights reserved.</p>
+    </footer>
+    <button id="backTop">
+        <img src="../圖片/鍵頭.png" alt="返回頂部">
+    </button>
+    <script src="../js/hamburgerMenu.js"></script>
+    <script src="../js/tonextstep.js"></script>
+    <script src="../js/backtop.js"></script>
+</body>
+
+</html>

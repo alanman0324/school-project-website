@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../logo/AI logo 小.ico" type="image/x-icon">
+    <title>AI 變聲器</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <span class="logo"><img src="../logo/AI logo.png" width="60" height="60"></span>
+        <label for="switch"><img src="../圖片/AI選單.png"></label>
+        <input type="checkbox" id="switch" aria-label="切換選單">
+        <ul class="menu">
+            <li><a href="../index.html">首頁</a></li>
+            <li><a href="../about.html">關於我們</a></li>
+            <li><a href="../index.html#features">功能展示</a></li>
+            <li><a href="../registration method.html">網站註冊方法</a></li>
+            <li><a href="../contact.html">聯絡我們</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">首頁</a> &gt; <span>AI 變聲器</span>
+        </div>
+
+        <section class="hero">
+            <h1>AI 變聲器</h1>
+            <p>Vidnoz AI提供名人聲音生成功能，讓使用者輕鬆模仿或生成特定名人的聲音。</p>
+            <p>以下是 Vidnoz AI 變聲器的基本流程：</p>
+        </section>
+
+        <section id="guide">
+            <h2>使用步驟</h2>
+
+            <div class="step" id="step1">
+                <h3>步驟 1：選擇或上傳語音樣本</h3>
+                <p>前往 <a href="https://tw.vidnoz.com/voice-changer.html" target="_blank">VIDNOZ 官方網站</a></p>
+                <p>Vidnoz AI 內建多種知名人物聲音庫（如演員、歌手、政治人物等）。使用者也可以上傳名人的語音樣本，讓 AI 學習其聲音特徵。</p>
+                <img src="../圖片/12.變聲器/2.gif" alt="步驟1示範">
+                <button onclick="scrollToNextStep('step2')">下一步</button>
+            </div>
+
+            <div class="step" id="step2">
+                <h3>步驟 2：輸入文字內容</h3>
+                <p>輸入想讓 AI 朗讀的文字，這段內容將以名人的聲音進行模擬。</p>
+                <img src="../圖片/12.變聲器/3.gif" alt="步驟2示範">
+                <button onclick="scrollToNextStep('step3')">下一步</button>
+            </div>
+
+            <div class="step" id="step3">
+                <h3>步驟 3：調整語言與速度</h3>
+                <p>AI 會分析照片，自動生成嘴部、臉部動作，使其與語音同步。</p><br>
+                <img src="../圖片/12.變聲器/4.gif" alt="步驟3示範"><br>
+                <img src="../圖片/12.變聲器/5.gif" alt="步驟3示範"><br>
+                <button onclick="scrollToNextStep('step4')">下一步</button>
+            </div>
+
+            <div class="step" id="step4">
+                <h3>步驟 4：AI 生成語音</h3>
+                <p>Vidnoz AI 透過深度學習與語音合成技術，分析聲音特徵，生成與名人聲音相似的音訊。</p>
+                <img src="../圖片/12.變聲器/6.gif" alt="步驟4示範">
+                <button onclick="scrollToNextStep('step5')">完成</button>
+            </div>
+
+            <div class="step" id="step5">
+                <h3>步驟 4：下載與應用</h3>
+                <p>生成的語音可下載為 MP3、WAV 格式，適用於娛樂、模仿影片、配音、廣播等。</p>
+                <img src="../圖片/12.變聲器/8.gif" alt="步驟4示範">
+                <button onclick="scrollToNextStep('step6')">完成</button>
+            </div>
+
+            <div class="step" id="step6">
+                <h3>成品</h3>
+                <p>Vidnoz 提供的 AI 變聲器可以模仿名人聲音，並且是免費的。<br>
+                    用戶可以輕鬆生成並下載所需的b語音檔案。提供的語音類型包括<br>名人語音、女性語音、鬼面語音和機器人語音等，
+                    並支持多位名人的語音模仿。</p>
+                <audio controls>
+                    <source src="../圖片/12.變聲器/AI變聲器.mp3" type="audio/mpeg">
+                    您的瀏覽器不支持音频播放。
+                </audio>
+            </div>
+
+            <div class="step">
+                <h3>注意事項</h3>
+                <ul>
+                    <li><strong>內容規範：</strong>輸入的內容需符合平台的使用規範，避免不當或違規行為。</li>
+                    <li><strong>免費服務：</strong>該服務為免費提供，但可能會有使用限制或功能限制。</li>
+                    <li><strong>版權問題：</strong>模仿名人聲音時，請注意可能的版權問題。</li>
+                    <li><strong>隱私與條款：</strong>了解平台的隱私政策和服務條款，清楚了解數據處理方式。</li>
+                </ul>
+                <br>
+                <a href="../index.html">返回首頁</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Copyright © 2025 xiao weilun &nbsp;&nbsp;&nbsp; All rights reserved.</p>
+    </footer>
+    <button id="backTop">
+        <img src="../圖片/鍵頭.png" alt="返回頂部">
+    </button>
+    <script src="../js/hamburgerMenu.js"></script>
+    <script src="../js/tonextstep.js"></script>
+    <script src="../js/backtop.js"></script>
+</body>
+
+</html>
